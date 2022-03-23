@@ -72,7 +72,8 @@ namespace ClientTCP
 
                     byte[] bufferRecived = new byte[128];
                     int recive = client.Receive(bufferRecived);
-                    Console.WriteLine($"Data recived {0}", Encoding.ASCII.GetString(bufferRecived, 0, recive));
+                    string resivedData = Encoding.ASCII.GetString(bufferRecived, 0, recive);
+                    Console.WriteLine($"Data recived {resivedData}");
                 }
 
 
