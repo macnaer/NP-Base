@@ -33,6 +33,7 @@ namespace Telnet
                 Console.WriteLine($"Data from client {resivedData}");
                 client.Send(buffer);
 
+
                 if (resivedData == "0")
                 {
                     break;
