@@ -5,7 +5,11 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Telnet", "Telnet\Telnet.csproj", "{11E731E4-8CD3-4C2F-8BCA-3089E36B13D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientTCP", "ClientTCP\ClientTCP.csproj", "{2481AC1B-4984-4CB2-9C16-67D5D644F05C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientTCP", "ClientTCP\ClientTCP.csproj", "{2481AC1B-4984-4CB2-9C16-67D5D644F05C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatClient", "ChatClient\ChatClient.csproj", "{CFBD365A-9CA6-42CA-87A2-6C586C551131}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatServer", "ChatServer\ChatServer.csproj", "{868F5A6A-149B-4D74-A1F2-DF6077A47F2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{2481AC1B-4984-4CB2-9C16-67D5D644F05C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2481AC1B-4984-4CB2-9C16-67D5D644F05C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2481AC1B-4984-4CB2-9C16-67D5D644F05C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFBD365A-9CA6-42CA-87A2-6C586C551131}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFBD365A-9CA6-42CA-87A2-6C586C551131}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFBD365A-9CA6-42CA-87A2-6C586C551131}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFBD365A-9CA6-42CA-87A2-6C586C551131}.Release|Any CPU.Build.0 = Release|Any CPU
+		{868F5A6A-149B-4D74-A1F2-DF6077A47F2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{868F5A6A-149B-4D74-A1F2-DF6077A47F2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{868F5A6A-149B-4D74-A1F2-DF6077A47F2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{868F5A6A-149B-4D74-A1F2-DF6077A47F2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -31,6 +31,7 @@ namespace Telnet
 
                 string resivedData = Encoding.ASCII.GetString(buffer, 0, numberOfRecivedBytes);
                 Console.WriteLine($"Data from client {resivedData}");
+                
                 client.Send(buffer);
 
 
