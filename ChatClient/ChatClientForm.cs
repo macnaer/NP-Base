@@ -18,15 +18,37 @@ namespace ChatClient
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void btnSendBroadcast_Click(object sender, EventArgs e)
         {
-            if(_chatClient == null)
+            if (_chatClient == null)
             {
-                // local port ... remote port
-                _chatClient = new ChatClient(8080, 1234);
-            }
+                int.TryParse(tbLocalPort.Text, out var nLocalPort);
+                int.TryParse(tbRemotePort.Text, out var nRemotePort);
 
-            _chatClient.Send("Hello from client");
+                _chatClient =
+                    new ChatClient
+                    (nLocalPort, nRemotePort);
+
+            }
+            _chatClient.Send(tbBroadcastText.Text);
+        }
+
+        private void btnSendMessage_Click(object sender, EventArgs e)
+        {
+            _chatClient.SendMessageToKnownServer(tbMessage.Text);
+        }
+
+        private void chatClient_PrintString(object sender, PrintStringEventArgs e)
+        {
+            Action<string> print = PrintToTextBox;
+
+            tbConsole.Invoke(print, new string[] { e.MessageToPrint });
+            //tbConsole.Text += $"{Environment.NewLine}{DateTime.Now} - {e.MessageToPrint}";
+        }
+
+        private void PrintToTextBox(string stringToPrint)
+        {
+            tbConsole.Text += $"{Environment.NewLine}{DateTime.Now} - {stringToPrint}";
         }
     }
 }
